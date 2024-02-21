@@ -2,7 +2,13 @@
 
 function filterInStockProducts(products) {
   // เริ่มเขียนโค้ดตรงนี้
-}
+  let newArray = [];
+  for(let i=0; i<products.length; i++)
+  {
+    if(products[i].quantity>0){newArray.push(products[i])};
+  }
+  return newArray;
+};
 
 // ตัวอย่างการใช้งาน
 const products = [
@@ -14,3 +20,4 @@ const products = [
 console.log(filterInStockProducts(products));
 // ผลลัพธ์ที่ได้จากการ Execute Function คือ
 // [{ name: "apple", quantity: 2 }, { name: "orange", quantity: 5 }]
+
